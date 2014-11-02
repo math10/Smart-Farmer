@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:background="@android:color/black">
+    
+ <LinearLayout 
+     android:layout_width="wrap_content"
+     android:layout_height="270dp"
+     android:orientation="vertical" 
+     
+     android:background="#FAF693"
+      >
+     >
+
+     <LinearLayout
+         android:layout_width="270dp"
+         android:layout_height="220dp"
+         android:orientation="vertical" >
+
+         <TextView
+             android:id="@+id/textHead"
+             android:layout_width="fill_parent"
+             android:layout_height="30dp"
+             android:layout_marginBottom="5dp"
+             android:gravity="center"
+             android:text="hahahhshah"
+             android:textStyle="bold"
+             android:textSize="17sp"
+             android:textColor="#000000" />
+
+         <TextView
+             android:id="@+id/textData"
+             android:layout_width="fill_parent"
+             android:layout_height="match_parent"
+             android:maxLines="101000"
+             android:layout_marginLeft="12sp" 
+             android:layout_marginRight="12sp"
+             android:scrollbars="vertical"
+             android:text="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+             android:textColor="#394F85"
+             android:textSize="15sp" />
+     </LinearLayout>
+
+     <Button
+         android:layout_marginTop="5dp"
+         android:id="@+id/dismiss"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginBottom="1dp"
+         android:background="#9DE334"
+         android:textStyle="bold"
+         android:text="E x i t " />
+     
+ </LinearLayout>
+
+</LinearLayout>

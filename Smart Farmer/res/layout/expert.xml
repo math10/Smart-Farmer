@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bkgrd"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/buttonshape2"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:text="Find Nearest Help Center" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginBottom="6dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        
+        android:background="@drawable/buttonshape2"
+        android:text="Call Zilla Correspondence" />
+    
+    
+    <Spinner
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+       
+       
+       android:background="@drawable/spindraw"
+        android:id="@+id/spinner1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+
+       />
+
+    <Spinner
+        
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        
+        android:id="@+id/spinner2"
+        android:layout_width="match_parent"
+ 		
+ 		android:background="@drawable/spindraw"
+ 		
+        android:layout_height="wrap_content" />
+    
+    
+    
+
+    <Button
+        android:layout_marginTop="5dp"
+         android:layout_marginBottom="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/buttonCall"
+        android:text="Phone  call"
+        android:textStyle="bold|normal"
+        android:textSize="30sp"
+        android:textColor="#F5BA0A"
+        
+        android:background="@drawable/buttonshape2"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        />
+
+</LinearLayout>
