@@ -84,7 +84,7 @@ public class FirstPage extends Activity {
 				// TODO Auto-generated method stub
 				// GiveToast();
 				// new CustomToast(t, "");
-				new CustomToast(FirstPage.this, "Hi Brinta");
+				new CustomToast(FirstPage.this, "Hi Java thearp fest");
 			}
 		});
 
@@ -92,10 +92,8 @@ public class FirstPage extends Activity {
 
 	public void GiveToast() {
 		Context context = getApplicationContext();
-		CharSequence text = "Hi Brinta!";
-		// Kire hala Thesis shesh tor ??
+		CharSequence text = "Hi Brinta!"
 		int duration = Toast.LENGTH_LONG;
-
 		Toast toast = Toast.makeText(context, text, duration);
 		toast.show();
 	}

@@ -19,35 +19,35 @@ import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.Toast;
 
 public class Expert extends Activity implements OnItemSelectedListener{
-	
+
 	Button gglemap , Call , CalBtn;
-	
+
 	Spinner District , Division ;
-	
+
 	boolean State = false ;
-	
+
 	protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.expert);
         Init();
         addDivision();
-        Log.d("her :: " , " hello maruf");
+
         Work();
     }
-	
+
 	public void Init(){
 		gglemap = (Button) findViewById(R.id.button1);
 		Call = (Button) findViewById(R.id.button2);
 		CalBtn = (Button) findViewById(R.id.buttonCall);
-		
+
 		Division = (Spinner) findViewById(R.id.spinner1);
 		District = (Spinner) findViewById(R.id.spinner2);
-		
+
 		Division.setOnItemSelectedListener((OnItemSelectedListener) this);
-		
+
 		ShowHidden(false);
 	}
-	
+
 	public void ShowHidden( boolean x ) {
 		if( x == false ) {
 			District.setVisibility(View.GONE);
@@ -60,11 +60,11 @@ public class Expert extends Activity implements OnItemSelectedListener{
 			//CalBtn.setVisibility(View.VISIBLE);
 		}
 	}
-	
+
 	public void Work(){
-		
+
 		gglemap.setOnClickListener( new OnClickListener() {
-			
+
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
@@ -72,9 +72,9 @@ public class Expert extends Activity implements OnItemSelectedListener{
 				startActivity(myInt);
 			}
 		});
-		
+
 		Call.setOnClickListener( new OnClickListener() {
-			
+
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
@@ -83,15 +83,15 @@ public class Expert extends Activity implements OnItemSelectedListener{
 				ShowHidden(State);
 			}
 		});
-		
-		
-		
-		
+
+
+
+
 		CalBtn.setOnClickListener(new OnClickListener() {
-			
+
 			@Override
 			public void onClick(View v) {
-				
+
 				if( District.getSelectedItem().equals("Dhaka") ){
 					Intent callIntent = new Intent(Intent.ACTION_CALL);
 					callIntent.setData( Uri.parse("tel:01674164319"));
@@ -114,12 +114,12 @@ public class Expert extends Activity implements OnItemSelectedListener{
 				}
 			}
 		});
-		
+
 	}
-	
-	
+
+
 	 public void addDivision() {
-			
+
 			List<String> list = new ArrayList<String>();
 			list.add("Dhaka");
 			list.add("Rajshahi");
@@ -129,19 +129,19 @@ public class Expert extends Activity implements OnItemSelectedListener{
 			list.add("Rangpur");
 			list.add("Sylhet");
 			Collections.sort(list);
-			
+
 			List<String> Tmp = new ArrayList<String>();
-			
+
 			Tmp.add("Select Division");
 			for(String st : list  ) Tmp.add(st);
-			
+
 			ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,R.layout.spinner_draw_latest, Tmp );
 			dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 			Division.setAdapter(dataAdapter);
-		
+
 		}
 	    public void SetDistrict(){
-			
+
 			String Dhaka[] = {"Dhaka","Faridpur","Gazipur","Gopalganj","Jamalpur","Kishoreganj","Madaripur","Manikganj","Munshiganj","Mymensingh","Narayanganj","Narsingdi","Netrakona","Rajbari","Shariatpur","Sherpur","Tangail"};
 			String Rajshahi[] = {"Bogra","Joypurhat","Naogaon","Natore","Nawabganj","Pabna","Rajshahi","Sirajganj"};
 			String Khulna[] = {"Bagerhat","Chuadanga","Jessore","Jhenaidah","Khulna","Kushtia","Magura","Meherpur","Narail","Satkhira"};
@@ -149,10 +149,10 @@ public class Expert extends Activity implements OnItemSelectedListener{
 			String Barisal[] = {"Barguna","Barisal","Bhola","Jhalokati","Patuakhali","Pirojpur"};
 			String Rangpur[] = {"Dinajpur","Gaibandha","Kurigram","Lalmonirhat","Nilphamari","Panchagarh","Rangpur","Thakurgaon"};
 			String Sylhet[] = {"Habiganj","Moulvibazar","Sunamganj","Sylhet"};
-			
+
 			List<String> myList = new ArrayList<String>();
 			myList.clear();
-			
+
 			if( Division.getSelectedItem().equals("Dhaka") ) {
 				District.setVisibility(View.VISIBLE);
 				CalBtn.setVisibility(View.VISIBLE);
@@ -173,7 +173,7 @@ public class Expert extends Activity implements OnItemSelectedListener{
 				CalBtn.setVisibility(View.VISIBLE);
 				Collections.addAll(myList,Chittagong);
 			}
-			
+
 			else if( Division.getSelectedItem().equals("Rangpur") ) {
 				District.setVisibility(View.VISIBLE);
 				CalBtn.setVisibility(View.VISIBLE);
@@ -192,13 +192,13 @@ public class Expert extends Activity implements OnItemSelectedListener{
 				CalBtn.setVisibility(View.GONE);
 				District.setVisibility(View.GONE);
 			}
-			
+
 			Collections.sort(myList);
-			
+
 			ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,R.layout.spinner_draw_latest, myList);
 			dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 			District.setAdapter(dataAdapter);
-			
+
 		}
 
 		@Override
@@ -211,6 +211,6 @@ public class Expert extends Activity implements OnItemSelectedListener{
 		@Override
 		public void onNothingSelected(AdapterView<?> arg0) {
 			// TODO Auto-generated method stub
-			
+
 		}
 }
